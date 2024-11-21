@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <div class="box">
+            <h1>DeleteTodo</h1>
+            <p>Are you sure you want to delete this todo?</p>
+            <form method="post" action="{%url 'delete' id%}">
+                {% csrf_token %}
+                <button  class="button_delete"  type="submit">Yes</button>
+                <a href="{% url 'todo' %}"class="button_back">No</a>
+            </form>
+        </div>
+    </body>
+</html>        

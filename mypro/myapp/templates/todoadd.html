@@ -1,0 +1,13 @@
+<body>
+    <div class="box">
+        <form method="post" action="{% url 'todoadd' %}">
+            {% csrf_token %}            
+            <h1>Add a New Todo</h1>
+            <div>
+                <label for="entry" class="visually-hidden">Todo Entry:</label>
+                <input id="entry" class="input_todo" placeholder="Enter your new todo" type="text" name="entry" required>
+            </div>
+            <button class="button_plus" type="submit">Add</button>
+        </form>
+    </div>
+</body>
